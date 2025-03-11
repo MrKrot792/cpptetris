@@ -1,9 +1,7 @@
 #include "utils.h"
 #include <chrono>
-#include <cmath>
 #include <cstdint>
 #include <ncurses.h>
-#include <vector>
 
 #define EMPTY_ 0  // Empty
 #define BLOCK_ 1  // Placed block
@@ -11,14 +9,12 @@
 
 #define SECOND 1000000000
 
+// Cool FPS stuff
 int64_t delta = 0;
 int64_t elapsed = 0;
 int64_t fps = 0;
-int64_t ffps = 0;
+int64_t ffps = 1;
 double _time = 0;
-
-double x = 0;
-double y = 0;
 
 bool running = true;
 
@@ -49,15 +45,9 @@ int main()
 
         _time += (double)delta / (double)SECOND;
 
-        x = std::sin(_time) * 10 + 20;
-        y = std::cos(_time) * 10 + 20;
-
+        // Drawing section
         erase();
-
         printw("FPS: %ld", ffps);
-        drawAt(Vec2(x, 5), '@');
-        drawAt(Vec2(5, y), '@');
-        drawAt(Vec2(x, y), '#');
 
         refresh();
 
