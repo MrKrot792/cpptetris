@@ -42,7 +42,6 @@ int main()
             ffps = fps * 2;
             fps = 0;
         }
-
         _time += (double)delta / (double)SECOND;
 
         // Drawing section

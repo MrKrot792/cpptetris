@@ -15,3 +15,33 @@ If your not using ARM, then you'll need to run `run` file, with ncurses installe
 | `<Down>` | Soft drop |
 | `<Up>` | Rotate anticlockwise |
 
+# Figures
+
+1.
+```
+##@@####
+```
+
+2.
+```
+  ##
+##@@##
+```
+
+3.
+```
+####
+####
+```
+
+4.
+```
+  ####
+##@@
+```
+
+5.
+```
+####
+  @@##
+```
